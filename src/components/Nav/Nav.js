@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles';
+import Terminal from '../Terminal';
 import {
     Container,
     Header,
@@ -10,7 +11,16 @@ import {
 class Nav extends React.Component {
     state = {
         menuFixed: false,
-        activeItem: 'home'
+        activeItem: 'home',
+        string: ['npm install^1000\n`installing developer...`',
+            'I am a <strong>Full stack developer</strong>',
+            'I love working with: Node',
+            'I love working with: Express',
+            'I love working with: React',
+            'I love working with: MongoDb',
+            'I love learning',
+            'I love being challenged',
+            'Come check out my work!']
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -26,9 +36,7 @@ class Nav extends React.Component {
             <>
                 <Container text style={{ marginTop: '2em' }}>
                     <Header textAlign='center' as='h1'>Welcome</Header>
-                    <p>
-                        {/* typed.js here */}
-                    </p>
+                    <Terminal strings={this.state.string} />
                 </Container>
                 <Visibility
                     onBottomPassed={this.stickTopMenu}
