@@ -1,6 +1,7 @@
 import React from 'react';
 import Typed from 'typed.js';
-import { Container } from 'semantic-ui-react';
+import styles from './styles'
+import { Container, Icon } from 'semantic-ui-react';
 
 
 class Terminal extends React.Component {
@@ -9,17 +10,17 @@ class Terminal extends React.Component {
         const { strings } = this.props
         const options = {
             strings: strings,
-            typeSpeed: 60,
+            typeSpeed: 100,
             smartBackspace: true,
             loop: true,
-            cursor: '_'
+            cursorChar: '_'
         }
         this.typed = new Typed(this.type, options)
     };
     render () {
         return (
-            <Container>
-                <span
+            <Container style={styles.box}>
+                <Icon inverted name='terminal'></Icon> <span
                     style={{ whiteSpace: 'pre' }}
                     ref={type => { this.type = type }}
                 />
