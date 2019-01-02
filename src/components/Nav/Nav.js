@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './styles';
 import Terminal from '../Terminal';
-import { Container, Header, Menu, Visibility, Icon } from 'semantic-ui-react'
+import { Container, Header, Menu, Visibility, Icon } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
 
 class Nav extends React.Component {
     state = {
         menuFixed: false,
-        activeItem: 'home',
+        // activeItem: 'home',
         string: ['npm install^1000\n`installing developer...`\n`I am a <strong>Full stack developer</strong>`',
             `I love working with: Node`,
             `I love working with: Express`,
@@ -17,14 +18,32 @@ class Nav extends React.Component {
             `Come check out my work!`]
     }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    // handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
     stickTopMenu = () => this.setState({ menuFixed: true })
 
     unStickTopMenu = () => this.setState({ menuFixed: false })
 
     render () {
-        const { menuFixed, activeItem } = this.state
+        const { menuFixed, activeItem } = this.state;
+
+        let menuItems = [];
+
+        this.props.items.map((item, i) => {
+            const name = this.props.items[i][0];
+            const route = this.props.items[i][1];
+            menuItems.push(
+                <Menu.Item
+                    key={`item-${i}`}
+                    index={i}
+                    as={Link}
+                    to={route}
+                    active={route === this.props.location.pathname}
+                >
+                    {name}
+                </Menu.Item>
+            )
+        })
 
         return (
             <>
@@ -46,7 +65,8 @@ class Nav extends React.Component {
                         style={menuFixed ? styles.fixedMenu : styles.menu}
                     >
                         <Container text>
-                            <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
+                            {menuItems}
+                            {/* <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>
                                 <Icon name='home' />
                                 Home
                             </Menu.Item>
@@ -70,7 +90,7 @@ class Nav extends React.Component {
                                 name='contact'
                                 active={activeItem === 'contact'}
                                 onClick={this.handleItemClick}
-                            />
+                            /> */}
                         </Container>
                     </Menu>
                 </Visibility>
@@ -79,5 +99,5 @@ class Nav extends React.Component {
     }
 }
 
-export default Nav;
+export default withRouter(Nav);
 

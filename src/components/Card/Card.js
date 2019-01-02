@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Container, Image } from 'semantic-ui-react';
+import images from '../../images.json';
 
-const Cards = props => (
+const Cards = () => (
     <Container>
         <Card.Group itemsPerRow={4}>
-            {props.images.map((image, i) =>
+            {images.map((image, i) =>
                 <Card>
                     <Image src={image.image} />
                     <Card.Content>
