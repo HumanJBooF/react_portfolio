@@ -8,29 +8,21 @@ import { Container } from 'semantic-ui-react';
 
 class App extends React.Component {
 
-  state = {
-    items: [['Home', '/'],
-    ['About me', '/Aboutme'],
-    ['Tech', '/tech'],
-    ['Projects', '/projects'],
-    ['Contact', 'contact']]
-  }
   render () {
     return (
       <>
         <Router>
           <>
-            <Nav items={this.state.items} />
+            <Nav />
             <Container>
               <Switch>
-                <Route exact path='/projects' render={Cards} />
+                <Route exact path='/projects'
+                  render={() => <Cards />}
+                />
               </Switch>
             </Container>
           </>
         </Router>
-
-        {/* <Nav />
-        <Cards images={this.state.images} /> */}
       </>
     )
   }
