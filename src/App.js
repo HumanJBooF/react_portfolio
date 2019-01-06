@@ -1,10 +1,10 @@
 import React from 'react';
-import './semantic/dist/semantic.min.css';
-import Nav from './components/Nav';
-import Cards from './components/Card';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from 'semantic-ui-react';
-
+import './semantic/dist/semantic.min.css';
+import Nav from './components/Nav';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 class App extends React.Component {
 
@@ -17,10 +17,11 @@ class App extends React.Component {
             <Container>
               <Switch>
                 <Route exact path='/projects'
-                  render={() => <Cards />}
+                  render={() => <Projects />}
                 />
               </Switch>
             </Container>
+            <Footer />
           </>
         </Router>
       </>

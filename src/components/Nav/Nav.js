@@ -16,7 +16,6 @@ class Nav extends React.Component {
             `I love being challenged`,
             `Come check out my work!`],
         items: [['Home', '/'],
-        ['About me', '/Aboutme'],
         ['Tech', '/tech'],
         ['Projects', '/projects'],
         ['Contact', 'contact']]

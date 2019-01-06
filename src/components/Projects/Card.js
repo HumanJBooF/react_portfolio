@@ -1,8 +1,10 @@
 import React from 'react';
-import { Card, Container, Image, List, Divider, Accordion, Grid, Segment } from 'semantic-ui-react';
+import { Card, Container, Image, List, Divider, Accordion, Grid, Segment, Header } from 'semantic-ui-react';
 import images from './images';
+import styles from './styles';
 
 class Cards extends React.Component {
+
     state = { activeIndex: -1 }
 
     handleClick = (e, title) => {
@@ -17,20 +19,18 @@ class Cards extends React.Component {
         const { activeIndex } = this.state;
         return (
             <Container>
+                <Header textAlign='center' size='huge' style={styles.head}>Projects</Header>
                 <Card.Group itemsPerRow={2} stackable>
                     {images.map((image, i) =>
                         <Card key={i} raised>
+                            <Image src={image.image} style={styles.image} />
                             <Card.Content>
-                                <Image src={image.image} />
-                                <Divider hidden />
                                 <Card.Header textAlign='center'>{image.name}</Card.Header>
                                 <Card.Description textAlign='center'>
                                     {image.description}
                                     <Divider hidden />
                                     <Accordion styled>
-                                        <Accordion.Title active={activeIndex === i} index={i} onClick={this.handleClick}>
-                                            Tech Used
-                                </Accordion.Title>
+                                        <Accordion.Title active={activeIndex === i} index={i} onClick={this.handleClick} content='Tech Used' />
                                         <Accordion.Content active={activeIndex === i}>
                                             <List>
                                                 {image.tech.map((val, index) =>
@@ -41,16 +41,18 @@ class Cards extends React.Component {
                                     </Accordion>
                                 </Card.Description>
                                 <Divider hidden />
-                                <Grid columns='equal' textAlign='center' doubling celled='internally'>
+                            </Card.Content>
+                            <Card.Content>
+                                <Grid columns='equal' textAlign='center' divided>
                                     <Grid.Column>
-                                        <Segment><a href={image.repo}>Repo Link</a></Segment>
+                                        <Segment><a href={image.repo} target='_blank' rel='noopener noreferrer'>Repo Link</a></Segment>
                                     </Grid.Column>
                                     {!image.live
                                         ?
                                         ''
                                         :
                                         <Grid.Column>
-                                            <Segment><a href={image.live}>Live Link</a></Segment>
+                                            <Segment><a href={image.live} target='_blank' rel='noopener noreferrer'>Live Link</a></Segment>
                                         </Grid.Column>}
 
                                 </Grid>
