@@ -54,10 +54,11 @@ class Nav extends React.Component {
                 </Container>
                 <Visibility
                     onBottomPassed={this.stickTopMenu}
-                    onBottomVisible={this.unStickTopMenu}
+                    onTopPassedReverse={this.unStickTopMenu}
                     once={false}
+                    offset={[0][100]}
                 >
-                    <Menu borderless
+                    <Menu
                         pointing
                         inverted
                         widths={5}
@@ -65,9 +66,7 @@ class Nav extends React.Component {
                         fixed={menuFixed ? 'top' : undefined}
                         style={menuFixed ? styles.fixedMenu : styles.menu}
                     >
-                        <Container text>
-                            {menuItems}
-                        </Container>
+                        {menuItems}
                     </Menu>
                 </Visibility>
             </>

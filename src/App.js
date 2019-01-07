@@ -5,6 +5,7 @@ import './semantic/dist/semantic.min.css';
 import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
 class App extends React.Component {
 
@@ -14,11 +15,11 @@ class App extends React.Component {
         <Router>
           <>
             <Nav />
-            <Container>
+            <Container style={{ marginBottom: '8em', marginTop: '8em' }}>
               <Switch>
-                <Route exact path='/projects'
-                  render={() => <Projects />}
-                />
+                <Route exact path='/' render={() => <Home />} />
+                <Route exact path='/projects' render={() => <Projects />} />
+
               </Switch>
             </Container>
             <Footer />

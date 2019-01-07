@@ -1,10 +1,11 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
+import styles from './styles';
 
 const Footer = () => (
-    <Menu fixed='bottom' inverted>
+    <Menu fixed='bottom' inverted style={styles.footer}>
         <Menu.Item>
-            test
+
         </Menu.Item>
     </Menu>
 );

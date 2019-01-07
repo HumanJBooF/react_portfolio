@@ -1,6 +1,6 @@
 const styles = {
     head: {
-        marginTop: '2em',
+        // marginTop: '5em',
         marginBottom: '2em'
     },
     image: {
