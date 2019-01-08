@@ -8,7 +8,13 @@ const styles = {
         boxShadow: 'none',
         marginBottom: '1em',
         marginTop: '4em',
-        transition: 'box-shadow 0.5s ease, padding 0.5s ease',
+        transition: 'box-shadow 0.2s ease, padding 0.2s ease',
+    },
+    header: {
+        paddingTop: '2em'
+    },
+    back: {
+        background: 'url(./assets/img/jscode.png)'
     }
 }
 

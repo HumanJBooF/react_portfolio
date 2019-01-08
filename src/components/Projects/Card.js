@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, Container, Image, List, Divider, Accordion, Grid, Segment, Header } from 'semantic-ui-react';
+import { Card, Image, List, Divider, Accordion, Grid, Segment, Header } from 'semantic-ui-react';
 import images from './images';
 import styles from './styles';
+import { Flip, Zoom } from 'react-reveal';
 
 class Cards extends React.Component {
 
@@ -18,11 +19,12 @@ class Cards extends React.Component {
     render () {
         const { activeIndex } = this.state;
         return (
-            <Container>
-                <Header textAlign='center' size='huge' style={styles.head}>Projects</Header>
+            <Segment piled>
+                    <Header textAlign='center' size='huge' style={styles.head} content='Projects'/>
                 <Card.Group itemsPerRow={2} stackable>
                     {images.map((image, i) =>
                         <Card key={i} raised>
+                    <Flip right fraction={0.4} duration={1500}>
                             <Image src={image.image} style={styles.image} />
                             <Card.Content>
                                 <Card.Header textAlign='center'>{image.name}</Card.Header>
@@ -32,11 +34,13 @@ class Cards extends React.Component {
                                     <Accordion styled>
                                         <Accordion.Title active={activeIndex === i} index={i} onClick={this.handleClick} content='Tech Used' />
                                         <Accordion.Content active={activeIndex === i}>
+                                          <Zoom>
                                             <List>
                                                 {image.tech.map((val, index) =>
                                                     <List.Item key={index}>{val}</List.Item>
                                                 )}
                                             </List>
+                                            </Zoom>
                                         </Accordion.Content>
                                     </Accordion>
                                 </Card.Description>
@@ -57,10 +61,11 @@ class Cards extends React.Component {
 
                                 </Grid>
                             </Card.Content>
+                    </Flip>
                         </Card>
                     )}
                 </Card.Group>
-            </Container>
+            </Segment>
         )
     }
 }

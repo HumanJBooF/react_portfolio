@@ -1,7 +1,7 @@
 import React from 'react';
 import Typed from 'typed.js';
 import styles from './styles'
-import { Container, Icon } from 'semantic-ui-react';
+import { Container, Icon, Header } from 'semantic-ui-react';
 
 
 class Terminal extends React.Component {
@@ -21,7 +21,8 @@ class Terminal extends React.Component {
     render () {
         return (
             <Container style={styles.box}>
-                <Icon inverted name='terminal'></Icon>
+                <p style={styles.text}>Joshua@Joshua-PC ~</p>
+                <Icon inverted name='dollar sign' />
                 <span
                     style={{ whiteSpace: 'pre' }}
                     ref={type => { this.type = type }}

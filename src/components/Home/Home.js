@@ -1,19 +1,21 @@
 import React from 'react';
-import { Container, Grid, Image, Segment } from 'semantic-ui-react';
+import { Grid, Image, Segment, Header } from 'semantic-ui-react';
+import Zoom from 'react-reveal/Zoom'
 
 const Home = () => (
-    <Container>
-        <Segment raised>
-            <Grid divided doubling>
-                <Grid.Column width={6}>
-                    <Image size='large' circular src='./assets/img/javascript-logo.png' />
+    <Zoom bottom duration={1500}>
+        <Segment piled>
+            <Grid columns='equal' stackable celled='internally'>
+                <Grid.Column>
+                    <Image fluid bordered rounded src='./assets/img/joshua.jpg' />
                 </Grid.Column>
-                <Grid.Column width={10}>
-                    about me here
-            </Grid.Column>
+                <Grid.Column width={12} textAlign='center'>
+                    <Header size='huge' dividing block content='About Me' inverted color='black' style={{ border: '1pt solid black' }} />
+
+                </Grid.Column>
             </Grid>
-        </Segment>
-    </Container>
+        </Segment >
+    </Zoom>
 );
 
 export default Home;

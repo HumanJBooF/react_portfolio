@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from './styles';
 import Terminal from '../Terminal';
-import { Container, Header, Menu, Visibility, Icon } from 'semantic-ui-react';
+import { Container, Header, Menu, Visibility, Icon, Divider } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 
 class Nav extends React.Component {
     state = {
         menuFixed: false,
-        string: ['npm install^1000\n`installing developer...`\n`I am a <strong>Full stack developer</strong>`',
+        string: ['npm install^1000\n`installing developer...`^1000\n`I am a <strong>Full stack developer</strong>`',
             `I love working with: Node`,
             `I love working with: Express`,
             `I love working with: React`,
@@ -47,16 +47,17 @@ class Nav extends React.Component {
         })
 
         return (
-            <>
-                <Container text style={{ marginTop: '2em' }}>
-                    <Header textAlign='center' as='h1'>Welcome</Header>
+            <Container fluid style={styles.back}>
+                <Container text>
+                    <Header textAlign='center' size='huge' content='Welcome' inverted style={styles.header} />
+                    <Divider hidden />
                     <Terminal strings={this.state.string} />
                 </Container>
                 <Visibility
-                    onBottomPassed={this.stickTopMenu}
+                    onTopPassed={this.stickTopMenu}
                     onTopPassedReverse={this.unStickTopMenu}
                     once={false}
-                    offset={[0][100]}
+                    offset={[0][50]}
                 >
                     <Menu
                         pointing
@@ -69,7 +70,7 @@ class Nav extends React.Component {
                         {menuItems}
                     </Menu>
                 </Visibility>
-            </>
+            </Container>
         )
     }
 }
