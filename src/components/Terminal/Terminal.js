@@ -20,14 +20,15 @@ class Terminal extends React.Component {
 
     render () {
         return (
-            <Container style={styles.box}>
+            <fieldset style={styles.box}>
+                <legend style={{ fontSize: '10px', background: 'blue' }}>c:\WINDOWS</legend>
                 <p style={styles.text}>Joshua@Joshua-PC ~</p>
                 <Icon inverted name='dollar sign' />
                 <span
                     style={{ whiteSpace: 'pre' }}
                     ref={type => { this.type = type }}
                 />
-            </Container>
+            </fieldset>
         );
     }
 }
