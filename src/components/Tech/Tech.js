@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from './styles';
 import images from './images';
 import { Icon, Segment, Image, Grid, Header, Divider } from 'semantic-ui-react';
+import './styles.css';
+const icons = [['html5', 'css3 alternate', 'git', 'database'], 
+               ['js', 'aws', 'code', 'docker'], 
+               ['windows', 'linux', 'npm', 'computer'], 
+               ['angular', 'gulp', 'less', 'sass']];
 
-const icons = [['html5', 'css3', 'git', 'database'], ['js', 'aws', 'code', 'terminal'], ['windows', 'linux', 'npm', 'computer']];
-const colors = ['red', 'blue', 'brown', 'purple', 'orange', 'green', 'olive', 'grey'];
+const colors = ['red', 'black'];
 
 const Tech = () => (
     <Segment piled raised padded='very'>
@@ -15,7 +18,7 @@ const Tech = () => (
             <Grid.Row divided centered>
                 {images.map((img, i) =>
                     <Grid.Column width={4} verticalAlign='middle' key={i}>
-                        <Image src={img.image} />
+                        <Image src={img.image} className='top-icons'/>
                     </Grid.Column>
                 )}
             </Grid.Row>
@@ -24,16 +27,15 @@ const Tech = () => (
             </Grid.Row>
             <Divider hidden />
             {icons.map((val, i) =>
-                <Grid.Row columns='equal' verticalAlign='middle' key={i} divided>
+                <Grid.Row columns='equal' verticalAlign='middle' key={i}>
                     {val.map((el, j) =>
                         <Grid.Column textAlign='center' key={j}>
                             <Icon
+                                className='bottom-icons'
                                 name={el}
-                                style={styles.icons}
                                 // circular
-                                size='huge'
-                                color={colors[Math.floor(Math.random() * colors.length)]}
-                            // inverted
+                                size='massive'
+                                // inverted
                             />
                         </Grid.Column>
                     )}

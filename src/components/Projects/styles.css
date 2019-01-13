@@ -1,0 +1,13 @@
+.Project-head {
+    margin-bottom: 2em;
+}
+
+.Project-image {
+    height: 400px;
+}
+
+.Project-image:hover {
+    transition: all 1s ease-in-out;
+    transform: scale(1.5);
+    z-index: 1000;
+}

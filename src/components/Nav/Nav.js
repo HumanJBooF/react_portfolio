@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles';
 import Terminal from '../Terminal';
-import { Container, Header, Menu, Visibility, Icon, Divider } from 'semantic-ui-react';
+import { Container, Header, Menu, Visibility, Divider } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 
 class Nav extends React.Component {
@@ -55,9 +55,9 @@ class Nav extends React.Component {
                 </Container>
                 <Visibility
                     onTopPassed={this.stickTopMenu}
-                    onTopPassedReverse={this.unStickTopMenu}
+                    onBottomPassedReverse={this.unStickTopMenu}
                     once={false}
-                    offset={[0][50]}
+                    offset={[0, 50]}
                 >
                     <Menu
                         pointing

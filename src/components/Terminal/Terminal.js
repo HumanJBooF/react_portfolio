@@ -1,7 +1,7 @@
 import React from 'react';
 import Typed from 'typed.js';
 import styles from './styles'
-import { Container, Icon, Header } from 'semantic-ui-react';
+import { Container, Icon } from 'semantic-ui-react';
 
 
 class Terminal extends React.Component {
@@ -20,15 +20,14 @@ class Terminal extends React.Component {
 
     render () {
         return (
-            <fieldset style={styles.box}>
-                <legend style={{ fontSize: '10px', background: 'blue' }}>c:\WINDOWS</legend>
+            <Container style={styles.box}>
                 <p style={styles.text}>Joshua@Joshua-PC ~</p>
                 <Icon inverted name='dollar sign' />
                 <span
                     style={{ whiteSpace: 'pre' }}
                     ref={type => { this.type = type }}
                 />
-            </fieldset>
+            </Container>
         );
     }
 }
