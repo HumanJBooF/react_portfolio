@@ -6,34 +6,36 @@ import Nav from './components/Nav';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Tech from './components/Tech'
-import posed, {PoseGroup} from 'react-pose'
+import Tech from './components/Tech';
+import Contact from './components/Contact';
+import posed, { PoseGroup } from 'react-pose'
 
 const RouteContainer = posed.div({
- enter: { opacity: 1, delay: 300, beforeChildren: true },
+  enter: { opacity: 1, delay: 300, beforeChildren: true, ease: 'easeInOut' },
   exit: { opacity: 0 }
 })
 
 const App = () => (
-     <Router>
-       <>
-       <Nav />
-        <Route render={({location}) =>
-          <PoseGroup>
-            <RouteContainer key={location.pathname}>
-            <Container style={{ marginBottom: '8em', marginTop: '8em' }}>
+  <Router>
+    <>
+      <Nav />
+      <Route render={({ location }) =>
+        <PoseGroup>
+          <RouteContainer key={location.pathname}>
+            <Container className='App-container'>
               <Switch location={location}>
-                <Route exact path='/' render={() => <Home />} />
-                <Route exact path='/projects' render={() => <Projects />} />
-                <Route exact path='/tech' render={() => <Tech />} />
+                <Route exact path='/' component={Home} />
+                <Route path='/projects' component={Projects} />
+                <Route path='/tech' component={Tech} />
+                <Route path='/contact' component={Contact} />
               </Switch>
             </Container>
-            </RouteContainer>
-          </PoseGroup>
-      }/>
+          </RouteContainer>
+        </PoseGroup>
+      } />
       <Footer />
-       </>
-      </Router>
+    </>
+  </Router>
 )
 
 export default App;

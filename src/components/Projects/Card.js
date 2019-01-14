@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Image, List, Divider, Accordion, Grid, Segment, Header } from 'semantic-ui-react';
 import images from './images';
-import './styles.css'
 
 class Cards extends React.Component {
 

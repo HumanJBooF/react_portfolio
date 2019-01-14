@@ -9,7 +9,7 @@ const Home = () => (
             </Grid.Column>
             <Grid.Column width={12} textAlign='center'>
                 <Header size='huge' dividing block content='About Me' inverted color='black' style={{ border: '1pt solid black' }} />
-                
+
             </Grid.Column>
         </Grid>
     </Segment >

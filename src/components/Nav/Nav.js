@@ -57,13 +57,13 @@ class Nav extends React.Component {
                     onTopPassed={this.stickTopMenu}
                     onBottomPassedReverse={this.unStickTopMenu}
                     once={false}
-                    offset={[0, 50]}
+                    offset={[50, 50]}
                 >
                     <Menu
                         pointing
                         inverted
                         widths={5}
-                        size='massive'
+                        size='tiny'
                         fixed={menuFixed ? 'top' : undefined}
                         style={menuFixed ? styles.fixedMenu : styles.menu}
                     >
