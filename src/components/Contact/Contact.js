@@ -1,21 +1,15 @@
 import React from 'react'
 import { Segment, Grid, Icon, Header, Card, Popup } from 'semantic-ui-react'
-
-const icons = [
-    { title: 'Click to go to my LinkedIn', icon: 'linkedin', color: 'blue', url: 'https://linkedin.com/in/joshua-leboeuf' },
-    { title: 'Click to check out my Github', icon: 'github', color: 'black', url: 'https://github.com/HumanJBooF' },
-    { title: 'Send me an Gmail', icon: 'google', color: 'red', url: null, mail: 'mailto:humanjboof@gmail.com' },
-    { title: 'Download my resume', icon: 'file text', color: 'black', url: './assets/resume/Resume-Joshua-LeBoeuf-12--1-2018.pdf', download: 'Joshua-LeBoeuf-Resume' }
-];
+import info from './info';
 
 const Contact = () => (
-    <Segment piled>
+    <Segment piled padded='very' raised>
         <Grid stackable>
             <Grid.Row centered>
-                <Header size='huge' content='Contact me' />
+                <Header size='huge' dividing content='Contact me' />
             </Grid.Row>
             <Grid.Row>
-                {icons.map(el =>
+                {info.map(el =>
                     <Grid.Column width={4}>
                         <Card raised>
                             <Card.Content textAlign='center'>

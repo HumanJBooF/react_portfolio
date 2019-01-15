@@ -18,10 +18,6 @@ body {
     color: rgb(136, 43, 38);
 }
 
-.Project-head {
-    margin-bottom: 2em;
-}
-
 .Project-image {
     height: 400px;
 }
@@ -32,8 +28,8 @@ body {
     z-index: 1000;
 }
 
-.Contact-icons:hover {
-    animation: bounce 1s;
+.Contact-icons:hover, .Home-icons:hover {
+    animation: bounce 1s ease-in-out 0s infinite alternate;
 }
 
 @keyframes bounce {
@@ -42,11 +38,11 @@ body {
         transform: translateY(0);
     }
     40% {
-        -webkit-transform: translateY(-30px);
-        transform: translateY(-30px);
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
     }
     80% {
-        -webkit-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
     }
 }

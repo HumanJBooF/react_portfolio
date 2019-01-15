@@ -17,8 +17,8 @@ class Cards extends React.Component {
     render () {
         const { activeIndex } = this.state;
         return (
-            <Segment piled>
-                <Header textAlign='center' size='huge' className='Project-head' content='Projects' />
+            <Segment piled padded='very' raised>
+                <Header textAlign='center' size='huge' dividing content='Projects' />
                 <Card.Group itemsPerRow={2} stackable>
                     {images.map((image, i) =>
                         <Card key={i} raised>

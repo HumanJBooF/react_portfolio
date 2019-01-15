@@ -13,9 +13,9 @@ const Tech = () => (
     <Segment piled raised padded='very'>
         <Grid stackable>
             <Grid.Row centered>
-                <Header size='huge' content='Mern Stack' dividing />
+                <Header size='huge' content='Mern Stack' dividing style={{ margin: '1em' }} />
             </Grid.Row>
-            <Grid.Row centered>
+            <Grid.Row centered style={{ border: '1pt solid' }}>
                 {images.map((img, i) =>
                     <Grid.Column width={4} verticalAlign='middle' key={i}>
                         <Image src={img.image} className='Tech-top-icons' />
@@ -23,9 +23,9 @@ const Tech = () => (
                 )}
             </Grid.Row>
             <Grid.Row centered>
-                <Header size='huge' content='Technology' />
+                <Header size='huge' content='Technology' style={{ marginTop: '1em' }} />
             </Grid.Row>
-            <Divider hidden />
+            <Divider />
             {icons.map((val, i) =>
                 <Grid.Row columns='equal' verticalAlign='middle' key={i}>
                     {val.map((el, j) =>
@@ -33,7 +33,7 @@ const Tech = () => (
                             <Icon
                                 className='Tech-bottom-icons'
                                 name={el}
-                                // circular
+                                bordered
                                 size='massive'
                             />
                         </Grid.Column>
