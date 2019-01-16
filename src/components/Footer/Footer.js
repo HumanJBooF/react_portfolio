@@ -9,7 +9,7 @@ const Footer = () => (
         </Menu.Item>
         <Menu.Item position='right'>
             <Icon name='copyright' inverted fitted size='large' />
-            <Header as='p' floated='right' content='2018' inverted />
+            <Header as='p' floated='right' content='2019' inverted />
         </Menu.Item>
     </Menu>
 );
