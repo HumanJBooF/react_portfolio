@@ -1,16 +1,14 @@
 {
   "name": "port",
   "version": "0.1.0",
-  "engines": {
-    "node": "8.11.2"
-  },
   "private": true,
+  "homepage": "https://humanjboof.github.io/react-portfolio/",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-pose": "^4.0.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.2",
+    "react-scripts": "^2.1.3",
     "semantic-ui": "^2.4.2",
     "semantic-ui-react": "^0.84.0",
     "typed.js": "^2.0.9"
@@ -20,6 +18,8 @@
     "watch-semantic": "cd src/semantic && yarn run build-semantic && gulp watch",
     "start": "yarn run build-semantic && react-scripts start",
     "build": "yarn run build-semantic && react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
@@ -31,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }

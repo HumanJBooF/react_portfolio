@@ -24,7 +24,7 @@ body {
 
 .Project-image:hover {
     transition: all 0.85s ease-in-out 0.75s;
-    transform: scale(1.3);
+    transform: scale(1.25);
     z-index: 1000;
 }
 
