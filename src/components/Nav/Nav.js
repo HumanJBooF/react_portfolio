@@ -15,10 +15,10 @@ class Nav extends React.Component {
             `I love learning`,
             `I love being challenged`,
             `Come check out my work!`],
-        items: [['Home', '/'],
-        ['Tech', '/tech'],
-        ['Projects', '/projects'],
-        ['Contact', 'contact']]
+        items: [['Home', '/react_portfolio/'],
+        ['Tech', '/react_portfolio/tech'],
+        ['Projects', '/react_portfolio/projects'],
+        ['Contact', '/react_portfolio/contact']]
     }
 
     stickTopMenu = () => this.setState({ menuFixed: true })

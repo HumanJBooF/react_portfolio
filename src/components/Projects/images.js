@@ -8,7 +8,7 @@ const images = [
         description: `Tournament Bracket Generator app. Safely sign up with your email, create a username and password. Don't worry your password is encrypted! As a user you can create a tournament or join one.If you create your on you control when you start it, you will also be the only one with access to push the other users to the next round.If you don't have the right amount of users, don't worry BYE weeks will be created at the right spot.Users are seeding based on when they joined the tournament!`
     },
     {
-        image: './assets/img/code.PNG',
+        image: './assets/img/code.png',
         name: 'Bamazon',
         tech: ['NodeJS', 'Javascript', 'MySQL', 'SQL', 'NPM Chalk', 'NPM inquirer', 'NPM MySQL', 'NPM dotenv', 'NPM Cli-table-redemption'],
         repo: 'https://github.com/HumanJBooF/bamazon',

@@ -2,7 +2,7 @@
   "name": "port",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://humanjboof.github.io/react-portfolio/",
+  "homepage": "https://humanjboof.github.io/react_portfolio/",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
