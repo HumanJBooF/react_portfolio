@@ -15,10 +15,14 @@ class Nav extends React.Component {
             `I love learning`,
             `I love being challenged`,
             `Come check out my work!`],
-        items: [['Home', '/react_portfolio/'],
-        ['Tech', '/react_portfolio/tech'],
-        ['Projects', '/react_portfolio/projects'],
-        ['Contact', '/react_portfolio/contact']]
+        items: [['Home', '/'],
+        ['Tech', '/tech'],
+        ['Projects', '/projects'],
+        ['Contact', '/contact']]
+        // items: [['Home', '/react_portfolio/'],
+        // ['Tech', '/react_portfolio/tech'],
+        // ['Projects', '/react_portfolio/projects'],
+        // ['Contact', '/react_portfolio/contact']]
     }
 
     stickTopMenu = () => this.setState({ menuFixed: true })
@@ -48,7 +52,7 @@ class Nav extends React.Component {
 
         return (
             <Container fluid style={styles.back}>
-                <Container text>
+                <Container>
                     <Header textAlign='center' size='huge' content='Welcome' inverted style={styles.header} />
                     <Divider hidden />
                     <Terminal strings={this.state.string} />

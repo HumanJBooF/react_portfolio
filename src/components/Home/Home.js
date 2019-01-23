@@ -2,10 +2,10 @@ import React from 'react';
 import { Grid, Image, Segment, Header, Container, Divider, Icon } from 'semantic-ui-react';
 
 const Home = () => (
-    <Segment piled padded='very' raised>
-        <Grid columns='equal' stackable celled='internally'>
-            <Grid.Column>
-                <Image fluid bordered rounded src='./assets/img/joshua.jpg' />
+    <Segment piled padded='very' raised className='home-segment'>
+        <Grid columns={16} celled='internally'>
+            <Grid.Column width={4}>
+                <Image className='home-img' bordered centered src='./assets/img/joshua.jpg' />
             </Grid.Column>
             <Grid.Column width={12} textAlign='center'>
                 <Grid.Row>
@@ -13,7 +13,7 @@ const Home = () => (
                 </Grid.Row>
                 <Divider hidden />
                 <Grid.Row>
-                    <Container text>
+                    <Container text fluid>
                         <p>Hello! My name is Joshua LeBoeuf and I am a Full Stack Developer. I attended UNH coding bootcamp where I learned MERN stack.
                         I have also been interested in technology, building computers forever made me fall in love with the hardware. Now I want to master
                         the software and development side. I have a passion for learning, designing, backend, frontend and anything else that is thrown at me.

@@ -19,7 +19,7 @@ class Cards extends React.Component {
         return (
             <Segment piled padded='very' raised>
                 <Header textAlign='center' size='huge' dividing content='Projects' />
-                <Card.Group itemsPerRow={2} stackable>
+                <Card.Group itemsPerRow={2}>
                     {images.map((image, i) =>
                         <Card key={i} raised>
                             <Image src={image.image} className='Project-image' />

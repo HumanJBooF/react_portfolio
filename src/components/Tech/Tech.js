@@ -11,7 +11,7 @@ const icons = [
 
 const Tech = () => (
     <Segment piled raised padded='very'>
-        <Grid stackable>
+        <Grid>
             <Grid.Row centered>
                 <Header size='huge' content='Mern Stack' dividing style={{ margin: '1em' }} />
             </Grid.Row>

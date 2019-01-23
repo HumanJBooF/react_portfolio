@@ -4,7 +4,7 @@ import info from './info';
 
 const Contact = () => (
     <Segment piled padded='very' raised>
-        <Grid stackable>
+        <Grid columns='even'>
             <Grid.Row centered>
                 <Header size='huge' dividing content='Contact me' />
             </Grid.Row>
