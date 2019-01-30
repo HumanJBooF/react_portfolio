@@ -19,7 +19,7 @@ const info = [
         title: 'Download my resume',
         icon: 'file text',
         color: 'black',
-        url: './assets/resume/Resume-Joshua-LeBoeuf-12--1-2018.pdf',
+        url: './assets/resume/Resume-Joshua-LeBoeuf-1-21-2018.pdf',
         download: 'Joshua-LeBoeuf-Resume'
     }
 ];
