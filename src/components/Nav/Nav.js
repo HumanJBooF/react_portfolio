@@ -26,11 +26,13 @@ class Nav extends React.Component {
     unStickTopMenu = () => this.setState({ menuFixed: false })
 
     render () {
-        const { menuFixed, items } = this.state;
-
+        const { menuFixed, items, string } = this.state;
+        const { location: { pathname } } = this.props;
+        const { back, header, fixedMenu, menu } = styles;
         let menuItems = [];
 
         items.map((item, i) => {
+            console.log(item)
             const name = items[i][0];
             const route = items[i][1];
             menuItems.push(
@@ -39,25 +41,27 @@ class Nav extends React.Component {
                     index={i}
                     as={Link}
                     to={route}
-                    active={route === this.props.location.pathname}
+                    active={route === pathname}
                 >
                     {name}
                 </Menu.Item>
             )
         })
-
         return (
-            <Container fluid style={styles.back}>
+            <Container fluid style={back}>
                 <Container>
-                    <Header textAlign='center' size='huge' content='Welcome' inverted style={styles.header} />
+                    <Header
+                        textAlign='center'
+                        size='huge'
+                        content='Welcome'
+                        inverted style={header} />
                     <Divider hidden />
-                    <Terminal strings={this.state.string} />
+                    <Terminal strings={string} />
                 </Container>
                 <Visibility
                     onTopPassed={this.stickTopMenu}
                     onBottomPassedReverse={this.unStickTopMenu}
                     once={false}
-                    offset={[50, 50]}
                 >
                     <Menu
                         pointing
@@ -65,7 +69,7 @@ class Nav extends React.Component {
                         widths={5}
                         size='tiny'
                         fixed={menuFixed ? 'top' : undefined}
-                        style={menuFixed ? styles.fixedMenu : styles.menu}
+                        style={menuFixed ? fixedMenu : menu}
                     >
                         {menuItems}
                     </Menu>
