@@ -32,7 +32,6 @@ class Nav extends React.Component {
         let menuItems = [];
 
         items.map((item, i) => {
-            console.log(item)
             const name = items[i][0];
             const route = items[i][1];
             menuItems.push(
@@ -54,20 +53,20 @@ class Nav extends React.Component {
                         textAlign='center'
                         size='huge'
                         content='Welcome'
-                        inverted style={header} />
+                        inverted style={header}
+                    />
                     <Divider hidden />
                     <Terminal strings={string} />
                 </Container>
                 <Visibility
-                    onTopPassed={this.stickTopMenu}
-                    onBottomPassedReverse={this.unStickTopMenu}
+                    onBottomPassed={this.stickTopMenu}
+                    onBottomVisible={this.unStickTopMenu}
                     once={false}
                 >
                     <Menu
                         pointing
                         inverted
                         widths={5}
-                        size='tiny'
                         fixed={menuFixed ? 'top' : undefined}
                         style={menuFixed ? fixedMenu : menu}
                     >
