@@ -8,6 +8,14 @@ const images = [
         description: `Tournament Bracket Generator app. Safely sign up with your email, create a username and password. Don't worry your password is encrypted! As a user you can create a tournament or join one.If you create your on you control when you start it, you will also be the only one with access to push the other users to the next round.If you don't have the right amount of users, don't worry BYE weeks will be created at the right spot.Users are seeding based on when they joined the tournament!`
     },
     {
+        image: './assets/img/showcase.jpg',
+        name: 'Developer Hang out',
+        tech: ['Nodejs', 'React', 'Redux', 'Bootstrap', 'Passport', 'Bcrypt', 'MongoDB', 'JSON Web Token', 'dotenv', 'mongoose', 'Axios', 'express'],
+        repo: 'https://github.com/HumanJBooF/devconnector',
+        live: 'https://developer-hangout.herokuapp.com',
+        description: `Social Network app for developers built with React and Redux for state management. Uses passport with bcrypt and jwt token for validation. Join, create a profile, post and comment. More features coming soon.`
+    },
+    {
         image: './assets/img/code.png',
         name: 'Bamazon',
         tech: ['NodeJS', 'Javascript', 'MySQL', 'SQL', 'NPM Chalk', 'NPM inquirer', 'NPM MySQL', 'NPM dotenv', 'NPM Cli-table-redemption'],
@@ -62,14 +70,6 @@ const images = [
         repo: 'https://github.com/HumanJBooF/mongo-scrapper',
         live: 'https://mongo-pcgamer-scraper.herokuapp.com/',
         description: `In this app you can use axios and cheerio to scrape the website pcgamers' news section for all the current articles. You can then save the articles, add notes for each article, unsave the article and delete the note. This is all using MongoDB and Mongoose.`
-    },
-    {
-        image: './assets/img/search.PNG',
-        name: 'PodSpot',
-        tech: ['Nodejs', 'HTML/CSS', 'Javascript', 'Jquery', 'HandlebarsJS', 'Materialize.css', 'mysql2', 'Passport.js', 'dotenv', 'Sequelize', 'podcast-search', 'socket-io', 'morgan'],
-        repo: 'https://github.com/HumanJBooF/podspot',
-        live: 'https://the-podspot.herokuapp.com/',
-        description: `Do you like podcast? Do you want to connect with others? Do you want to know what others think about certain podcast? Well you have come to the right spot! This app allows users to search any podcast by name, episode or keywords! Get back a list! click and open up! You will see a description, the title and a link to to episode! If there are reviews already you will see those to! You can leave your own review to and have it save to your username!`
     },
     {
         image: './assets/img/train1.jpg',
