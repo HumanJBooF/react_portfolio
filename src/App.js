@@ -24,10 +24,10 @@ const App = () => (
           <RouteContainer key={location.pathname}>
             <Container className='App-container'>
               <Switch location={location}>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/projects' component={Projects} />
-                <Route exact path='/tech' component={Tech} />
-                <Route exact path='/contact' component={Contact} />
+                <Route exact path='/react_portfolio' component={Home} />
+                <Route exact path='/react_portfolio/projects' component={Projects} />
+                <Route exact path='/react_portfolio/tech' component={Tech} />
+                <Route exact path='/react_portfolio/contact' component={Contact} />
               </Switch>
             </Container>
           </RouteContainer>
