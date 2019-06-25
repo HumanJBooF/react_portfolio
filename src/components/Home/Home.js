@@ -15,10 +15,10 @@ const Home = () => (
                 <Grid.Row>
                     <Container text fluid>
                         <p>Hello! My name is Joshua LeBoeuf and I am a Full Stack Developer. I attended UNH coding bootcamp where I learned MERN stack.
-                        I have also been interested in technology, building computers forever made me fall in love with the hardware. Now I want to master
-                        the software and development side. I have a passion for learning, designing, backend, frontend and anything else that is thrown at me.
-                        I enjoy a challenge, I enjoy trying to find solutions to problems that seem nearly impossible. Take a look around, check out my work, and
-                        contact me if you would like to work on something together, have questions, or are looking for a dev to hire.</p>
+                        After graduating I was asked to come back as a assistant teacher. This has greatly increased my knowledge in the subject. I am constantly helping students
+                        debug their code. I also worked as a full stack developer for a start-up for a while. This was very beneficial as I was able to start from scratch. This was a very
+                        fun experience. I learned how to make games of chance, I learned how to use numerous services on aws and about security. I want to continue learning and expanding my
+                        skill set. I have a passion for developing and I just really love what I do.</p>
                         <Divider hidden />
                     </Container>
                 </Grid.Row>

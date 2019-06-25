@@ -8,6 +8,14 @@ const images = [
         description: `Tournament Bracket Generator app. Safely sign up with your email, create a username and password. Don't worry your password is encrypted! As a user you can create a tournament or join one.If you create your on you control when you start it, you will also be the only one with access to push the other users to the next round.If you don't have the right amount of users, don't worry BYE weeks will be created at the right spot.Users are seeding based on when they joined the tournament!`
     },
     {
+        image: './assets/img/vice.png',
+        name: 'Vice Lotteries',
+        tech: ['React', 'Redux', 'CSS', 'JSS', 'SaSS', 'Javascript', 'Material-ui', 'Axios', 'AWS', 'MongoDB', 'Mongoose', 'Docker', 'Cognito'],
+        repo: 'Private (as of now)',
+        live: 'https://dev.vicelotteries.com',
+        description: `A new way to gamble and save, Sign up, play fun games and win real money.`
+    },
+    {
         image: './assets/img/showcase.jpg',
         name: 'Developer Hang out',
         tech: ['Nodejs', 'React', 'Redux', 'Bootstrap', 'Passport', 'Bcrypt', 'MongoDB', 'JSON Web Token', 'dotenv', 'mongoose', 'Axios', 'express'],
