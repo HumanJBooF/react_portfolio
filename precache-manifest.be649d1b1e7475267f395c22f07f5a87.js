@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react_portfolio/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "c72560f08bfb099a5e34",
+    "revision": "a4929272caada49c3b9b",
     "url": "/react_portfolio/static/css/main.5e2b8282.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/react_portfolio/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "c72560f08bfb099a5e34",
-    "url": "/react_portfolio/static/js/main.c72560f0.chunk.js"
+    "revision": "a4929272caada49c3b9b",
+    "url": "/react_portfolio/static/js/main.a4929272.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -56,16 +56,16 @@ self.__precacheManifest = [
     "url": "/react_portfolio/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/react_portfolio/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/react_portfolio/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
     "url": "/react_portfolio/static/media/brand-icons.c5ebe0b3.ttf"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/react_portfolio/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/react_portfolio/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "8146704b75eb69d61769e5759f32ebb2",
+    "revision": "cb7163195a3d2f46a9181a54ee8367d3",
     "url": "/react_portfolio/index.html"
   }
 ];
